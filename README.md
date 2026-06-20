@@ -1,23 +1,11 @@
 # Terraform Azure FastAPI Starter
 
-A learning project that provisions basic Azure infrastructure using Terraform.
-
-> Not production-ready — built to practice IaC concepts and build a DevOps portfolio piece.
-
-## What It Creates
-
-| Resource | Free tier |
-|---|---|
-| Resource Group | Yes |
-| Storage Account (Standard LRS) | Yes |
-| Private blob container | Yes |
-
-**Not included:** App Service Plan + Linux Web App require a VM quota that Azure free subscriptions do not provide (quota limit: 0 VMs). These resources are documented in `infra/main.tf` with a note on what's needed to add them.
+Provisions basic Azure storage infrastructure using Terraform. Built as a DevOps/IaC portfolio project.
 
 ## Prerequisites
 
 - [Terraform](https://developer.hashicorp.com/terraform/install) >= 1.5
-- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) + an Azure free subscription
+- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 ## Usage
 
@@ -31,20 +19,18 @@ terraform init
 terraform plan
 terraform apply
 
-# when done
-terraform destroy
+terraform destroy  # when done
 ```
 
-## Key Variables
+## Variables
 
 | Variable | Default | Description |
 |---|---|---|
+| `resource_group_name` | `rg-fastapi-starter` | Resource Group name |
 | `location` | `westus` | Azure region |
 | `environment` | `dev` | Environment label |
-| `app_name` | `fastapi-starter` | Prefix for resource names |
-| `storage_account_tier` | `Standard` | Storage performance tier |
+| `app_name` | `fastapi-starter` | Resource name prefix |
+| `storage_account_tier` | `Standard` | Storage tier |
 | `storage_replication_type` | `LRS` | Replication strategy |
 
-## CI
-
-GitHub Actions runs `terraform fmt -check`, `terraform init`, and `terraform validate` on every push and pull request.
+See [INFRASTRUCTURE.md](INFRASTRUCTURE.md) for architecture details and constraints.

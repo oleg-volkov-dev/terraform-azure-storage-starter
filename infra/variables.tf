@@ -1,35 +1,35 @@
 variable "resource_group_name" {
-  description = "Name of the Azure Resource Group that will contain all resources."
+  description = "Azure Resource Group name"
   type        = string
   default     = "rg-fastapi-starter"
 }
 
 variable "location" {
-  description = "Azure region where resources will be created (e.g. eastus, westeurope)."
+  description = "Azure region"
   type        = string
   default     = "westus"
 }
 
 variable "environment" {
-  description = "Deployment environment label — used in resource tags (e.g. dev, staging, prod)."
+  description = "Environment label (dev, staging, prod)"
   type        = string
   default     = "dev"
 }
 
 variable "app_name" {
-  description = "Short name for the application — used as a prefix in resource names."
+  description = "Application name prefix used in resource names"
   type        = string
   default     = "fastapi-starter"
 }
 
 variable "storage_account_tier" {
-  description = "Performance tier for the Storage Account. Standard is sufficient for most use cases."
+  description = "Storage Account performance tier"
   type        = string
   default     = "Standard"
 }
 
 variable "storage_replication_type" {
-  description = "Replication strategy for the Storage Account (LRS = locally redundant, cheapest option)."
+  description = "Storage Account replication strategy"
   type        = string
   default     = "LRS"
 }
