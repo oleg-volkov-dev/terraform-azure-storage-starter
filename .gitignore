@@ -19,3 +19,6 @@ override.tf.json
 
 # macOS metadata
 .DS_Store
+
+# Python venv
+.venv

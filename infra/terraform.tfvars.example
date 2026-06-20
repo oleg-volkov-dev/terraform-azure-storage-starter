@@ -7,7 +7,7 @@
 #   terraform plan
 
 resource_group_name = "rg-fastapi-starter"
-location            = "eastus"
+location            = "westus"
 environment         = "dev"
 app_name            = "fastapi-starter"
 
