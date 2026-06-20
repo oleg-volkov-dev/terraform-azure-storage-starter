@@ -31,6 +31,7 @@ resource "azurerm_storage_account" "main" {
     environment = var.environment
     project     = var.app_name
     managed_by  = "terraform"
+    owner = "oleg-the-legend"
   }
 }
 
