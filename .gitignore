@@ -1,0 +1,21 @@
+# Local Terraform state files — never commit these (they may contain secrets)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Variable files with real values — commit only the .example version
+terraform.tfvars
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files (local developer overrides, not meant to be shared)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# macOS metadata
+.DS_Store

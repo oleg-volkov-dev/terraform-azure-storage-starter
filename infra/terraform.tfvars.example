@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# terraform.tfvars is intentionally gitignored to avoid committing sensitive data.
+#
+# Usage:
+#   cp terraform.tfvars.example terraform.tfvars
+#   # edit terraform.tfvars with your values
+#   terraform plan
+
+resource_group_name = "rg-fastapi-starter"
+location            = "eastus"
+environment         = "dev"
+app_name            = "fastapi-starter"
+
+# Docker image to deploy — change to your own image once you have one.
+# Format: "REGISTRY/IMAGE:TAG" for Docker Hub images,
+#         or "myregistry.azurecr.io/image:tag" for Azure Container Registry.
+container_image = "tiangolo/uvicorn-gunicorn-fastapi:python3.11"
+
+# App Service Plan SKU:
+#   F1 = Free (no custom domain/SSL, limited to 60 min/day CPU — use for testing only)
+#   B1 = Basic (cheapest always-on tier, supports Linux containers)
+#   B2/B3 = More CPU/RAM
+app_service_sku = "B1"
+
+# Storage options (LRS is cheapest — fine for dev/learning)
+storage_account_tier     = "Standard"
+storage_replication_type = "LRS"
