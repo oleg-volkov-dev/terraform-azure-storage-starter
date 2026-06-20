@@ -1,4 +1,4 @@
-# Terraform Azure FastAPI Starter
+# Terraform Azure Storage Starter
 
 Provisions basic Azure storage infrastructure using Terraform.
 
